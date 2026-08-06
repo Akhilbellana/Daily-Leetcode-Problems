@@ -1,20 +1,24 @@
 class Solution {
     public int[] findErrorNums(int[] nums) {
-        Set<Integer>set=new HashSet<>();
+        Map<Integer,Integer>map=new HashMap<>();
         List<Integer>list=new ArrayList<>();
-        for(int n:nums){
-            if(set.contains(n)){
-                list.add(n);
-            }else{
-                set.add(n);
-            }
+        int duplicate=-1;
+        int missing=-1;
+        for(int i=0;i<nums.length;i++){
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
         }
         for(int i=1;i<=nums.length;i++){
-            if(!set.contains(i)){
-                list.add(i);
+            if(map.containsKey(i)){
+                if(map.get(i)>1){
+                duplicate=i;
+            }
+            }else{
+            missing=i;
             }
         }
-        int[] a =new int[list.size()];
+        list.add(duplicate);
+        list.add(missing);
+        int[] a=new int[list.size()];
         for(int i=0;i<list.size();i++){
             a[i]=list.get(i);
         }
