@@ -75,7 +75,7 @@ Each accepted solution is added to this repository as I continue my DSA journey.
 
 ## 🎯 Goals
 
-* [ ] 🟢 100 LeetCode Problems
+✔️ 🟢 100 LeetCode Problems
 * [ ] 🟢 250 LeetCode Problems
 * [ ] 🟡 500 LeetCode Problems
 * [ ] 🔴 1000 LeetCode Problems
