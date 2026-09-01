@@ -13,7 +13,6 @@ class Solution {
          if(i==s.length()){
             return true;
          }
-        return false;
-        
+        return false;        
     }
 }
