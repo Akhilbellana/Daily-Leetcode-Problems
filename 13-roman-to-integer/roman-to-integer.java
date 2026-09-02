@@ -14,7 +14,6 @@ class Solution {
                 num-=map.get(s.charAt(i-1));
             }else{
                 num+=map.get(s.charAt(i-1));
-
             }
         }
         return num;
